@@ -10,60 +10,101 @@
   <body>
     <section class="section">
     	<div class="container">
-      		<h1 class="title">Contact</h1>
+      		<h1 class="title">Request translation</h1>
       		<nav class="navbar" role="navigation" aria-label="main navigation">
-  				<div class="navbar-brand">
-    				<a class="navbar-item" href="mytranslations.html">My Translations</a>
-					<a class="navbar-item" href="reqtrans.html">Request Translations</a>
-					<a class="navbar-item" href="translate.html">Translate</a>
-					<a class="navbar-item" href="contact.html">Contact</a>
-					<button class="button navbar-burger"></button>
-					</div>
-				</div>
-			</nav>
-					<div class="field has-addons">
-						<div class="control is-expanded">
-	  						<input class="input" type="text" placeholder="Your Title">
-	  						<input class="input" type="text" placeholder="Context Tags">
-	  						<div class="field">
-	  							<div class="control">
-	  								<textarea class="textarea" type"text" placeholder="Text to be translated"></textarea>
-	  							</div>
-	  						</div>
-	  					<div class="field is-horizontal">
-	  						<div class="field-label is-normal">
-	  							<label class="label">Sourcelanguage</label>
-	  						</div>
-	  					<div class="select is-fullwidth">
-		      				<select name="language">
-		        				<option value="English">English</option>
-		        				<option value="Finnish">Finnish</option>
-		        				<option value="Deutsch">Deustch</option>
-		      				</select>
-										  <div class="control">
-				    <button type="submit" class="button is-primary">Choose</button>
-				  </div>
-				  </div>
-				  	</div>
+      				<div class="navbar-brand">
+        			<a class="navbar-item" href="mytranslations.html">My Translations</a>
+    					<a class="navbar-item" href="reqtrans.html">Request Translations</a>
+    					<a class="navbar-item" href="translate.html">Translate</a>
+    					<a class="navbar-item" href="contact.html">Contact</a>
+    					<button class="button navbar-burger"></button>
+    					</div>
+          </nav>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">From</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="text" placeholder="Your Title">
+              <span class="icon is-small is-left">
+                <i class="fa fa-user"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control is-expanded has-icons-left has-icons-right">
+
+              <input class="input" type="text" placeholder="Context Tags">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fa fa-check"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Text</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" placeholder="The text to be translated"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field has-addons">
+				<div class="control is-expanded">
 					<div class="field is-horizontal">
-	  						<div class="field-label is-normal">
-	  							<label class="label">Targetlanguage</label>
-	  						</div>
-	  					<div class="select is-fullwidth">
-		      				<select name="language">
-		        				<option value="English">English</option>
-		        				<option value="Finnish">Finnish</option>
-		        				<option value="Deutsch">Deustch</option>
-		      				</select>
-										  <div class="control">
-				    <button type="submit" class="button is-primary">Choose</button>
-				  </div>
-				  </div>
-				  	</div>
-
-
-					</div> 					
-  				</div>
-    	</div>
+						<div class="field-label is-normal">
+							<label class="label">Source language</label>
+						</div>
+					<div class="select is-horizontal">
+      				<select name="language">
+        				<option value="English">English</option>
+        				<option value="Finnish">Finnish</option>
+        				<option value="Deutsch">Deustch</option>
+      				</select>
+           </div>
+    	  	</div>
+        </div>
+      </div>
+      <div class="field has-addons">
+        <div class="control is-expanded">
+        <div class="field is-horizontal">
+  						<div class="field-label is-normal">
+  							<label class="label">Target language</label>
+  						</div>
+  					<div class="select is-narrow">
+	      				<select name="language">
+	        				<option value="English">English</option>
+	        				<option value="Finnish">Finnish</option>
+	        				<option value="Deutsch">Deustch</option>
+	      				</select>
+            </div>
+			  	</div>
+        </div>
+      </div>
+      <div class="field has-addons">
+				<div class="control is-expanded">
+          <div class="control">
+            <button type="submit" class="button is-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
