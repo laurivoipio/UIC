@@ -1,15 +1,16 @@
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
 <script>
-  // // Initialize Firebase
-  // var config = {
-  //   apiKey: "AIzaSyALTOc8Xejm7fGqvlxju2JVLc2YAcHHArE",
-  //   authDomain: "crowdsourcedtranslation-696a0.firebaseapp.com",
-  //   databaseURL: "https://crowdsourcedtranslation-696a0.firebaseio.com",
-  //   projectId: "crowdsourcedtranslation-696a0",
-  //   storageBucket: "crowdsourcedtranslation-696a0.appspot.com",
-  //   messagingSenderId: "445544329993"
-  // };
-  // //firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyALTOc8Xejm7fGqvlxju2JVLc2YAcHHArE",
+    authDomain: "crowdsourcedtranslation-696a0.firebaseapp.com",
+    databaseURL: "https://crowdsourcedtranslation-696a0.firebaseio.com",
+    projectId: "crowdsourcedtranslation-696a0",
+    storageBucket: "crowdsourcedtranslation-696a0.appspot.com",
+    messagingSenderId: "445544329993"
+  };
+  //firebase.initializeApp(config);
 
   var firebaseRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
 
@@ -17,7 +18,7 @@
   {
     var title = $('#post-title').text();
 
-    var post = $('#post-content').text();
+    var post = $('#post-tags').text();
 
     var date = Date();
 
