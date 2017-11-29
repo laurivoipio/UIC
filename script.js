@@ -13,22 +13,21 @@ var config = {
 
 // Initialize your Firebase app
 firebase.initializeApp(config);
-}
+};
+function submitPost() {
+     var myDataRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com/');
+     var name = $('#titleInput').val();
+     var text = $('#postInput').val();
+     myDataRef.push({name: name, text: text});
+     $('#postInput').val('');
 
-// Reference to your entire Firebase database
-var datab = firebase.database();
-var content = datab.fer('content');
-
-// Get a reference to the recommendations object of your Firebase.
-// Note: this doesn't exist yet. But when we write to our Firebase using
-// this reference, it will create this object for us!
-
-// Push our first recommendation to the end of the list and assign it a
-// unique ID automatically.
-recommendations.push({
-    "title": "The danger of a single story",
-    "presenter": "Chimamanda Ngozi Adichie",
-    "link": "https://www.ted.com"
-});
-});
+     myDataRef.on('child_added', function(snapshot) {
+          var post = snapshot.val();
+          displayUserPost(post.name, post.text);
+     })
+     function displayUserPost(name, text) {
+         $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#PostsDiv'));
+         $('#PostsDiv')[0].scrollTop = $('#PostsDiv')[0].scrollHeight;
+     }
+ };
 </script>
