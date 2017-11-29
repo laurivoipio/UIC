@@ -15,9 +15,9 @@
 
   function funct1(evt)
   {
-    var title = $('#post-text').text();
+    var title = $('#post-title').text();
 
-    var post = $('#post-tags').text();
+    var post = $('#post-content').text();
 
     var date = Date();
 
