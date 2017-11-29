@@ -1,6 +1,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
 <script>
+function setup() {
 var config = {
   apiKey: "AIzaSyALTOc8Xejm7fGqvlxju2JVLc2YAcHHArE",
   authDomain: "crowdsourcedtranslation-696a0.firebaseapp.com",
@@ -12,14 +13,15 @@ var config = {
 
 // Initialize your Firebase app
 firebase.initializeApp(config);
+}
 
 // Reference to your entire Firebase database
-var myFirebase = firebase.database().ref();
+var datab = firebase.database();
+var content = datab.fer('content');
 
 // Get a reference to the recommendations object of your Firebase.
 // Note: this doesn't exist yet. But when we write to our Firebase using
 // this reference, it will create this object for us!
-var recommendations = myFirebase.child("recommendations");
 
 // Push our first recommendation to the end of the list and assign it a
 // unique ID automatically.
