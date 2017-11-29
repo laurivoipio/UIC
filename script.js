@@ -18,9 +18,9 @@ var recommendations = firebase.database().ref("recommendations");
 var submitRecommendation = function () {
 
 // Get input values from each of the form elements
-var title = $("#talkTitle").val();
-var presenter = $("#talkPresenter").val();
-var link = $("#talkLink").val();
+var title = $("#talkTitle").text();
+var presenter = $("#talkPresenter").text();
+var link = $("#talkLink").text();
 
 // Push a new recommendation to the database using those values
 recommendations.push({
