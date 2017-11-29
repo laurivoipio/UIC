@@ -12,7 +12,7 @@ storageBucket: "crowdsourcedtranslation-696a0.appspot.com",
 firebase.initializeApp(config);
 
 // Reference to the recommendations object in your Firebase database
-var recommendations = firebase.database().ref("recommendations");
+var recommendations = firebase.database().ref("crowdsourcedtranslation-696a0");
 
 // Save a new recommendation to the database, using the input in the form
 var submitRecommendation = function () {
