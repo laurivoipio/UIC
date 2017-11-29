@@ -9,23 +9,41 @@
     storageBucket: "crowdsourcedtranslation-696a0.appspot.com",
     messagingSenderId: "445544329993"
   };
-  firebase.initializeApp(config);
+  //firebase.initializeApp(config);
 
-var firebaseRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
-var sourceLanguage = $('post-sourclang').text();
-var targetLanguage = $('post-targlang').text();
-var transtext = $('post-text').text();
-var transtags = $('post-tags').text();
-// Save data to firebase
-function savedata(){
-  var sourceLanguage = $('post-sourclang').text();
-  var targetLanguage = $('post-targlang').text();
-  var transtext = $('post-text').text();
-  var transtags = $('post-tags').text();
+  var firebaseRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
 
-  firebaseRef.set({Source: sourceLanguage, Target: targetLanguage, Ttext:transtext, Tags:transtags});
-  evt.preventDefault();
-}
-var postRef = firebaseRef.push();
-submit.onclick = postRef
+  function funct1(evt)
+  {
+    var title = $('#post-text').text();
+
+    var post = $('#post-tags').text();
+
+    var date = Date();
+
+    firebaseRef.set({Title: title, Content: post, Date: date});
+    evt.preventDefault();
+  }
+
+  var submit = document.getElementsByTagName('button')[0];
+
+  submit.onclick = funct1;
+
+// var firebaseRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
+// var sourceLanguage = $('post-sourclang').text();
+// var targetLanguage = $('post-targlang').text();
+// var transtext = $('post-text').text();
+// var transtags = $('post-tags').text();
+// // Save data to firebase
+// function savedata(){
+//   var sourceLanguage = $('post-sourclang').text();
+//   var targetLanguage = $('post-targlang').text();
+//   var transtext = $('post-text').text();
+//   var transtags = $('post-tags').text();
+//
+//   firebaseRef.set({Source: sourceLanguage, Target: targetLanguage, Ttext:transtext, Tags:transtags});
+//   evt.preventDefault();
+// }
+// var postRef = firebaseRef.push();
+// submit.onclick = postRef
 </script>
