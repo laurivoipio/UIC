@@ -1,50 +1,45 @@
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyALTOc8Xejm7fGqvlxju2JVLc2YAcHHArE",
-    authDomain: "crowdsourcedtranslation-696a0.firebaseapp.com",
-    databaseURL: "https://crowdsourcedtranslation-696a0.firebaseio.com",
-    projectId: "crowdsourcedtranslation-696a0",
-    storageBucket: "crowdsourcedtranslation-696a0.appspot.com",
-    messagingSenderId: "445544329993"
-  };
-  //firebase.initializeApp(config);
+var config = {
+apiKey: "<your-api-key>",
+authDomain: "<your-project-id>.firebaseapp.com",
+databaseURL: "https://<your-project-id>.firebaseio.com",
+storageBucket: "<your-project-id>.appspot.com",
+};
 
-  var firebaseRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
+// Initialize your Firebase app
+firebase.initializeApp(config);
 
-  function funct1(evt)
-  {
-    var title = $('#post-title').text();
+// Reference to the recommendations object in your Firebase database
+var recommendations = firebase.database().ref("recommendations");
 
-    var post = $('#post-tags').text();
+// Save a new recommendation to the database, using the input in the form
+var submitRecommendation = function () {
 
-    var date = Date();
+// Get input values from each of the form elements
+var title = $("#talkTitle").val();
+var presenter = $("#talkPresenter").val();
+var link = $("#talkLink").val();
 
-    firebaseRef.set({Title: title, Content: post, Date: date});
-    evt.preventDefault();
-  }
+// Push a new recommendation to the database using those values
+recommendations.push({
+  "title": title,
+  "presenter": presenter,
+  "link": link
+});
+};
 
-  var submit = document.getElementsByTagName('button')[0];
+// When the window is fully loaded, call this function.
+// Note: because we are attaching an event listener to a particular HTML element
+// in this function, we can't do that until the HTML element in question has
+// been loaded. Otherwise, we're attaching our listener to nothing, and no code
+// will run when the submit button is clicked.
+$(window).load(function () {
 
-  submit.onclick = funct1;
+// Find the HTML element with the id recommendationForm, and when the submit
+// event is triggered on that element, call submitRecommendation.
+$("#recommendationForm").submit(submitRecommendation);
 
-// var firebaseRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
-// var sourceLanguage = $('post-sourclang').text();
-// var targetLanguage = $('post-targlang').text();
-// var transtext = $('post-text').text();
-// var transtags = $('post-tags').text();
-// // Save data to firebase
-// function savedata(){
-//   var sourceLanguage = $('post-sourclang').text();
-//   var targetLanguage = $('post-targlang').text();
-//   var transtext = $('post-text').text();
-//   var transtags = $('post-tags').text();
-//
-//   firebaseRef.set({Source: sourceLanguage, Target: targetLanguage, Ttext:transtext, Tags:transtags});
-//   evt.preventDefault();
-// }
-// var postRef = firebaseRef.push();
-// submit.onclick = postRef
+});
 </script>
