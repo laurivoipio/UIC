@@ -2,10 +2,10 @@
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
 <script>
 var config = {
-apiKey: "<your-api-key>",
-authDomain: "<your-project-id>.firebaseapp.com",
-databaseURL: "https://<your-project-id>.firebaseio.com",
-storageBucket: "<your-project-id>.appspot.com",
+  apiKey: "AIzaSyALTOc8Xejm7fGqvlxju2JVLc2YAcHHArE",
+  authDomain: "crowdsourcedtranslation-696a0.firebaseapp.com",
+databaseURL: "https://crowdsourcedtranslation-696a0.firebaseio.com",
+storageBucket: "crowdsourcedtranslation-696a0.appspot.com",
 };
 
 // Initialize your Firebase app
