@@ -11,9 +11,11 @@
   };
   firebase.initializeApp(config);
 
-var messagesRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
-var messageField = document.getElementById('messageInput');
-
+var firebaseRef = new Firebase('https://crowdsourcedtranslation-696a0.firebaseio.com');
+var sourceLanguage = $('post-sourclang').text();
+var targetLanguage = $('post-targlang').text();
+var transtext = $('post-text').text();
+var transtags = $('post-tags').text();
 // Save data to firebase
 function savedata(){
   var sourceLanguage = $('post-sourclang').text();
