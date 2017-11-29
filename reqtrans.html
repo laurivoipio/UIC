@@ -6,50 +6,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
 
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
 
 </head>
 <body>
-  <section class="section">
-    <div class="container">
-        <h1 class="title">Request translation</h1>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-            <a class="navbar-item" href="mytranslations.html">My Translations</a>
-            <a class="navbar-item" href="reqtrans.html">Request Translations</a>
-            <a class="navbar-item" href="translate.html">Translate</a>
-            <a class="navbar-item" href="contact.html">Contact</a>
-            <button class="button navbar-burger"></button>
-            </div>
-        </nav>
-    </div>
-    <div class="container">
-      <h1>Talks You Should Watch</h1>
+  <script>
+  function setup() {
+  var config = {
+    apiKey: "AIzaSyALTOc8Xejm7fGqvlxju2JVLc2YAcHHArE",
+    authDomain: "crowdsourcedtranslation-696a0.firebaseapp.com",
+    databaseURL: "https://crowdsourcedtranslation-696a0.firebaseio.com",
+    projectId: "crowdsourcedtranslation-696a0",
+    storageBucket: "crowdsourcedtranslation-696a0.appspot.com",
+    messagingSenderId: "445544329993"
+  };
 
-      <h3>Submit a Talkie</h3>
+  // Initialize your Firebase app
+  firebase.initializeApp(config);
+  }
 
-      <form id="recommendationForm">
-        <div class="form-group">
-          <label for="talkTitle">Title</label>
-          <input class="form-control" id="talkTitle" placeholder="Title of the talk">
-        </div>
+  // Reference to your entire Firebase database
+  var datab = firebase.database();
+  var content = datab.fer('content');
 
-        <div class="form-group">
-          <label for="talkPresenter">Presenter</label>
-          <input class="form-control" id="talkPresenter" placeholder="Name of the presenter">
-        </div>
+  // Get a reference to the recommendations object of your Firebase.
+  // Note: this doesn't exist yet. But when we write to our Firebase using
+  // this reference, it will create this object for us!
 
-        <div class="form-group">
-          <label for="talkLink">Link</label>
-          <input type="text" class="form-control" id="talkLink" placeholder="Link to a recording of the talk">
-        </div>
-
-        <!-- When you click this button, trigger the submit event on this form. -->
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-  </section>
+  // Push our first recommendation to the end of the list and assign it a
+  // unique ID automatically.
+  recommendations.push({
+      "title": "The danger of a single story",
+      "presenter": "Chimamanda Ngozi Adichie",
+      "link": "https://www.ted.com"
+  });
+  });
+  </script>
+  <h2>test</h2>
 </body>
 </html>
