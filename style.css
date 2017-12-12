@@ -11,6 +11,9 @@
 	bottom:0;
 	width:100%;
 }
+$gray: #d3d3d3
+$primary: $gray
+
 
 .card+.card
  margin-top: 20px

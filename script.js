@@ -6,3 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
  }
 });
+
+
+$(document).ready(function(){
+  $('#title').focus();
+    $('#text').autosize();
+});
+
+function theFunction() {
+    alert("Tsdnfjik");
+}
