@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>My Translations</title>
     <script src="script.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
   </head>
   <body>
     <section class="section">
@@ -16,6 +18,7 @@
 
     <nav class="hero is-info is-fullwidth" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
+        <a class="navbar-item" href="newsfeed.html">News Feed</a>
         <a class="navbar-item" href="mytranslations.html">My Translations</a>
         <a class="navbar-item" href="reqtrans.html">Request Translations</a>
         <a class="navbar-item" href="translate.html">Translate</a>
@@ -25,62 +28,71 @@
     </nav>
 
     <section class="section">
-     <div class="container">
+
+    <div class="container">
       <div class="card is-fullwidth">
-       <header class="card-header">
-        <p class="hero is-info card-header-title">Translation 1 ("Car loan document") 30/11/2017</p>
-        <a class="card-header-icon card-toggle">
-         <i class="fa fa-angle-down"></i>
-        </a>
-       </header>
-       <div class="card-content is-hidden hero">
-        <div class="content">
-          <div class="columns">
-            <div class="column">
-              Original Source: English
-              <br></br>
-              I love theoretical computer science
-              <br></br>
-              Translated by: Lauri Voipio 12/10/2017
+        <header class="card-header">
+          <p class="hero is-danger card-header-title">Tailoring Education Form 30/11/2017 (Not Complete)</p>
+          <a class="card-header-icon card-toggle">
+          <i class="fa fa-angle-down"></i>
+          </a>
+        </header>
+        <div class="card-content hero">
+          <div class="content">
+            <div class="columns">
+              <div class="column">
+                Source Language: Finnish
+                <br></br>
+                Sopivan auton löydettyäsi voit hakea sitovan rahoituspäätöksen unelmiesi autoon saman tien - tarvitset vain pankkitunnukset. Myönteisen rahoituspäätöksen saatuasi, voit sopia ajoneuvon ostosta ja toimituksesta suoraan autoa myyvän liikkeen kanssa. Rahoitussopimus osamaksurahoituksesta ja rahoituksen ehdoista laaditaan autoliikkeessä.    
+              </div>
+              <div class="column">
+                Translation: Arabic
+                <br></br>
+                بعد العثور علي السيارة المناسبة يمكنك التقدم بطلب للحصول علي قرار تمويل ملزم لسيارة أحلامك علي نفس الطريق--تحتاج فقط رموز البنك. بعد تلقي قرار التمويل الإيجابي ، يمكنك الموافقة علي شراء وتسليم السيارة مباشره مع المحل الذي يبيع السيارة. وينشا اتفاق التمويل المتعلق بالتمويل المشترك وشروط التمويل في معرض السيارات.
+                <br></br>
+                Translated by:
+              </div>
             </div>
-            <div class="column">
-              Translation: Finnish
-              <br></br>
-              Rakastuin mä Vioreliin.... NOT
-            </div>
+          </div>
         </div>
-       </div>
       </div>
+    </div>
 
+    <div class="container">
       <div class="card is-fullwidth">
-       <header class="card-header">
-        <p class="hero is-info card-header-title">Translation 2 ("Tailor profession document") 28/11/2017</p>
-        <a class="card-header-icon card-toggle">
-         <i class="fa fa-angle-down"></i>
-        </a>
-       </header>
-       <div class="card-content is-hidden hero">
-        <div class="content">
-          <div class="columns">
-            <div class="column">
-              Original Source
+        <header class="card-header">
+          <p class="hero is-info card-header-title">Car Loan Document 28/11/2017 (Complete)</p>
+          <a class="card-header-icon card-toggle">
+          <i class="fa fa-angle-down"></i>
+          </a>
+        </header>
+        <div class="card-content is-hidden hero">
+          <div class="content">
+            <div class="columns">
+              <div class="column">
+                Source Language: Finnish
+                <br></br>
+                Sopivan auton löydettyäsi voit hakea sitovan rahoituspäätöksen unelmiesi autoon saman tien - tarvitset vain pankkitunnukset. Myönteisen rahoituspäätöksen saatuasi, voit sopia ajoneuvon ostosta ja toimituksesta suoraan autoa myyvän liikkeen kanssa. Rahoitussopimus osamaksurahoituksesta ja rahoituksen ehdoista laaditaan autoliikkeessä.    
+              </div>
+              <div class="column">
+                Translation: Arabic
+                <br></br>
+                بعد العثور علي السيارة المناسبة يمكنك التقدم بطلب للحصول علي قرار تمويل ملزم لسيارة أحلامك علي نفس الطريق--تحتاج فقط رموز البنك. بعد تلقي قرار التمويل الإيجابي ، يمكنك الموافقة علي شراء وتسليم السيارة مباشره مع المحل الذي يبيع السيارة. وينشا اتفاق التمويل المتعلق بالتمويل المشترك وشروط التمويل في معرض السيارات.
+                <br></br>
+                Translated by: Lauri 12/10/2017
+              </div>
             </div>
-            <div class="column">
-              Translation
-            </div>
+          </div>
         </div>
-        </div>
-       </div>
       </div>
+    </div>
 
-
-
-     </div>
 
     </section>
 
 
     <footer class="footer is-footer is-fullwidth">
+      <p>Copyright 2018.</p>
     </footer>
 
   </body>
